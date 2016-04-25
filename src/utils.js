@@ -1,3 +1,4 @@
+var Base64 = require('base-64')
 var FloatArray = global.Float64Array || global.Float32Array; // make PhantomJS happy
 
 function string_to_bytes ( str, utf8 ) {
@@ -54,7 +55,8 @@ function hex_to_bytes ( str ) {
 }
 
 function base64_to_bytes ( str ) {
-    return string_to_bytes( atob( str ) );
+    //return string_to_bytes( atob( str ) );
+    return string_to_bytes( Base64.decode( str ) );
 }
 
 function bytes_to_string ( bytes, utf8 ) {
@@ -110,7 +112,8 @@ function bytes_to_hex ( arr ) {
 }
 
 function bytes_to_base64 ( arr ) {
-    return btoa( bytes_to_string(arr) );
+    //return btoa( bytes_to_string(arr) );
+    return Base64.encode( bytes_to_string(arr) );
 }
 
 function pow2_ceil ( a ) {

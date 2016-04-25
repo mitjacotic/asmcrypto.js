@@ -14,6 +14,7 @@ var defaults = [
     'bn',
     'rsa-pkcs1',
     'rng-globals',
+    'fixes',
     'origin',
 ];
 
@@ -28,6 +29,10 @@ var modules = [
         name: 'utils',
         files: [ 'src/utils.js' ],
         implies: [ 'exports' ]
+    },
+    {
+        name: 'fixes',
+        files: [ 'src/fixes.js' ],
     },
     {
         name: 'origin',
@@ -483,7 +488,7 @@ module.exports = function ( grunt ) {
             },
             all: {
                 files: {
-                    'asmcrypto.js': 'asmcrypto.js'
+                    'asmcrypto.min.js': 'asmcrypto.js'
                 }
             }
         },
