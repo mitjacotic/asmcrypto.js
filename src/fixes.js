@@ -1,6 +1,6 @@
 if(!global.location) {
   global.location = {
-    href: 'http://localhost',
+    href: 'https://localhost',
     protocol: 'https:'
   }
 }
