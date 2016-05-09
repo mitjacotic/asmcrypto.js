@@ -1,4 +1,4 @@
-/*! asmCrypto, (c) 2013 Artem S Vybornov, opensource.org/licenses/MIT */
+/*! asmCrypto v0.0.12, (c) 2013 Artem S Vybornov, opensource.org/licenses/MIT */
 (function ( exports, global ) {
 
 function IllegalStateError () { var err = Error.apply( this, arguments ); this.message = err.message, this.stack = err.stack; }
@@ -4708,8 +4708,8 @@ var _isaac_rand = ISAAC.rand,
 
 var _random_estimated_entropy = 0,
     _random_required_entropy = 256,
-    _random_allow_weak = false,
-    _random_skip_system_rng_warning = false,
+    _random_allow_weak = true,
+    _random_skip_system_rng_warning = true,
     _random_warn_callstacks = {};
 
 var _hires_now;
