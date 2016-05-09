@@ -16,8 +16,8 @@ var _isaac_rand = ISAAC.rand,
 
 var _random_estimated_entropy = 0,
     _random_required_entropy = 256,
-    _random_allow_weak = false,
-    _random_skip_system_rng_warning = false,
+    _random_allow_weak = true,
+    _random_skip_system_rng_warning = true,
     _random_warn_callstacks = {};
 
 var _hires_now;
